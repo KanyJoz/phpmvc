@@ -7,7 +7,7 @@
     class UserDAOImpl implements UserDAO {
         // query constants
         private $GET_ALL_USER = 'SELECT * FROM users';
-        private $GET_USER_BY_ID = 'SELECT name FROM users WHERE id = :id';
+        private $GET_USER_BY_ID = 'SELECT * FROM users WHERE id = :id';
         
         // singleton field
         private static $instance = null;
@@ -48,7 +48,7 @@
         {
             // prepare the query
             $conn = ConnectionDB::get_instance();
-            $stmt = $conn->get_connection()->prepare($this->GET_ALL_USER);
+            $stmt = $conn->get_connection()->prepare($this->GET_USER_BY_ID);
             $stmt->bindValue(':id', $id);
 
             // execute the query

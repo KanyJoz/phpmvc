@@ -6,7 +6,7 @@
     // DAO objects that interacts with the database throug the PDO connection
     class AdvertisementDAOImpl implements AdvertisementDAO {
         // query constants
-        private $GET_ALL_ADS_WITH_USERS = 'SELECT * FROM advertisements'; // INNNNNEEN FOLYTAAAATOM
+        private $GET_ALL_ADS_WITH_USERS = 'SELECT * FROM advertisements';
         
         // singleton field
         private static $instance = null;
@@ -19,7 +19,7 @@
         public function list_all_ads_with_users() {
             // execute the query
             $conn = ConnectionDB::get_instance();
-            $stmt = $conn->get_connection()->prepare($this->GET_ALL_USER);
+            $stmt = $conn->get_connection()->prepare($this->GET_ALL_ADS_WITH_USERS);
             $stmt->execute();
 
             // get all rows from the user table
@@ -27,19 +27,20 @@
             $stmt->closeCursor();
 
             // make an empty array for the users
-            $all_users = array();
+            $all_ads = array();
 
             // fill in the models with data from the database
-            foreach($results as $user_row) {
-                $user = new User();
-                $user->set_id($user_row['id']);
-                $user->set_name($user_row['name']);
+            foreach($results as $ad_row) {
+                $ad = new Advertisement();
+                $ad->set_id($ad_row['id']);
+                $ad->set_userid($ad_row['userid']);
+                $ad->set_title($ad_row['title']);
 
-                $all_users[] = $user;
+                $all_ads[] = $ad;
             }
 
             // return the data
-            return $all_users;
+            return $all_ads;
         }
 
         // get the only instance
