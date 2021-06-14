@@ -10,6 +10,7 @@
         
         // singleton field
         private static $instance = null;
+        
         // private constructor
         private function __construct() {
         }

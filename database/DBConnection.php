@@ -1,5 +1,5 @@
 <?php
-    // Signleton class to get a single database conneciton to MySQL
+    // Singleton class to get a single database conneciton to MySQL
     class ConnectionDB {
         // singleton field and the connection object
         private static $instance = null;

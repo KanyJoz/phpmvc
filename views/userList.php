@@ -9,15 +9,21 @@
 <body>
     <h1>User List</h1>
     <table border=1 class="center">
-        <tr><th>Users</th></tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        <!-- list all users -->
         <?php
             require_once('../controllers/UserController.php');
             $controller = new UserController();
 
             foreach($controller->get_data() as $res){
-                echo $res->get_name();
-            }
-            
+                echo '<tr>';
+                echo '<td>' . $res->get_id() . '</td>';
+                echo '<td>' . $res->get_name() . '</td>';
+                echo '</tr>';
+            }            
         ?>
     </table>
 </body>
