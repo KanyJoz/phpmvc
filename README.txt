@@ -5,10 +5,11 @@ Launching the applications (on Windows):
         --> Click Config, ini.php and write the port to some unused one, for example: 3307
         --> If still not working, just click Services, Search for MySQL and kill the process
 3) Unzip the file (from the email, or from the github link I will write down)
-4) Move the folder to your htdocs dorectory of your xampp directory of your drive (default is C:)
-5) Launch the XAMPP Control Panel and start Apache and MySQL
-6) Go to http://localhost/phpmyadmin/ in your broser (I used Chrome)
-7) Go to SQL and Copy the contents of the sql/init.sql file and execute the code
-8) Refresh and you should see the advertisements and users table in the php_mvc_example database
-9) Go to http://localhost/PHP_MVC_Example/index.php (or maybe if you rename the folder then substitute it to the PHP_MVC_Example part of the URL)
-10) Done, the applications is running
+4) Rename the folder to something for example: PHP_MVC_Example
+5) Move the folder to your htdocs dorectory of your xampp directory of your drive (default is C:)
+6) Launch the XAMPP Control Panel and start Apache and MySQL
+7) Go to http://localhost/phpmyadmin/ in your broser (I used Chrome)
+8) Go to SQL and Copy the contents of the sql/init.sql file and execute the code
+9) Refresh and you should see the advertisements and users table in the php_mvc_example database
+10) Go to http://localhost/PHP_MVC_Example/index.php (or maybe if you rename the folder then substitute it to the PHP_MVC_Example part of the URL)
+11) Done, the applications is running
