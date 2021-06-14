@@ -37,11 +37,11 @@ INSERT INTO users(name) VALUES
 
 -- Fill in some dummy advertisements
 INSERT INTO advertisements(userid, title) VALUES
-    (1, 'Prosthetic legs for sale if you have only a right foot'),
-    (2, 'Click here to create a CV so maybe somdebody will know your name'),
+    (1, 'Right foot = best foot'),
+    (2, 'Click here to create a CV'),
     (3, 'Stay fit, back after 700 days'),
-    (3, 'Could have been worse'),
-    (4, 'Free real estate for tatoo'),
+    (3, 'Just hang in there'),
+    (4, 'Free real estate'),
     (4, 'Really fast, oh my'),
     (5, 'Getting hungry'),
     (6, 'Hard work pays off'),

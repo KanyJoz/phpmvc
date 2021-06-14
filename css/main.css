@@ -1,0 +1,85 @@
+/* reset */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* it makes 1rem = 10px */
+html {
+    font-size: 62.5%;
+}
+
+
+/* styles in order of appereance on the sites */
+/* I use element rules and some classes, and not BEM with classes because it's a smaller project */
+body {
+    min-height: 100vh;
+    color: #777;
+
+    background-image: linear-gradient(to right bottom, #FF3366, #BA265D);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 7rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn:link, .btn:visited, .btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    font-size: 2rem;
+
+    border: none;
+    cursor: pointer;
+
+    background-color: #FFF;
+    color: inherit;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#000, .2);
+}
+
+.btn:active, .btn:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+}
+
+.btn:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+table {
+    margin: 0 auto;
+    background-color: #FFF;
+    border: .1rem solid #777;
+    font-size: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-spacing: 0.5rem;
+}
+
+tr, td {
+    border: .05rem solid #777;
+}

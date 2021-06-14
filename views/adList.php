@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Advertisements</title>
 </head>
 <body>
-    <h1>Ad List</h1>
-    <table border=1 class="center">
+    <h1>List of Advertisements</h1>
+    <table>
         <tr>
             <th>Id</th>
             <th>Username</th>
             <th>Title</th>
         </tr>
+
             <!-- list all ads with usernames -->
             <?php
             require_once('../controllers/AdvertisementController.php');
