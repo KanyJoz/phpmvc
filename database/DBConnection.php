@@ -15,7 +15,7 @@
         // Privte constructor for singleton, config data requirement and establish connection
         private function __construct() {
             // get the config data
-            $config_info = require("../config/dbconfig");
+            $config_info = require_once("../config/dbconfig");
             $this->host = $config_info['dbhost'];
             $this->dbname = $config_info['dbname'];
             $this->user = $config_info['username'];
