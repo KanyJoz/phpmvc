@@ -1,1 +1,1 @@
-This will become the README.txtgit remote add origin https://github.com/KanyJoz/phpmvc.git
+This will become the README.txt
