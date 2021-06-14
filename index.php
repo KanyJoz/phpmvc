@@ -8,7 +8,8 @@
 </head>
 <body>
 <h1>LINKS</h1>
-    <a href="./views/userList.php">USRERS</a>
-    <a href="./views/adList.php.php">ADS</a>
+    <!-- Link forging, to signal the controller what task it needs to do -->
+    <a href="./views/userList.php?task=list">USRERS</a>
+    <a href="./views/adList.php?task=list">ADS</a>
 </body>
 </html>

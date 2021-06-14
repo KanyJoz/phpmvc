@@ -8,5 +8,17 @@
 </head>
 <body>
     <h1>User List</h1>
+    <table border=1 class="center">
+        <tr><th>Users</th></tr>
+        <?php
+            require_once('../controllers/UserController.php');
+            $controller = new UserController();
+
+            foreach($controller->get_data() as $res){
+                echo $res->get_name();
+            }
+            
+        ?>
+    </table>
 </body>
 </html>

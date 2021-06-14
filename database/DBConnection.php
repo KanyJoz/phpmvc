@@ -15,7 +15,7 @@
         // Privte constructor for singleton, config data requirement and establish connection
         private function __construct() {
             // get the config data
-            $config_info = require_once("../config/dbconfig");
+            $config_info = require_once("../config/dbconfig.php");
             $this->host = $config_info['dbhost'];
             $this->dbname = $config_info['dbname'];
             $this->user = $config_info['username'];
@@ -40,13 +40,12 @@
         }
 
         // get the only instance
-        public static function get_instance() {
-          if(!self::$instance)
-          {
-            self::$instance = new ConnectionDB();
-          }
-         
-          return self::$instance;
+        public static function get_instance()
+        {
+            if (null === static::$instance) {
+                static::$instance = new static();
+            }
+            return static::$instance;
         }
 
         // through the instance get the connection
