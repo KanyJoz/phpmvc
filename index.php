@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>LINKS</h1>
-    <a href="./userList.php">USRERS</a>
-    <a href="./adList.php">ADS</a>
+    <a href="./views/userList.php">USRERS</a>
+    <a href="./views/adList.php.php">ADS</a>
 </body>
 </html>
