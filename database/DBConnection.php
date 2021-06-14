@@ -24,8 +24,8 @@
 
             // get the connection object and safe it to the field
             try {
-                $this->conn = new PDO($dsn, $this->user, $this->pass);
-                $this->conn.setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+                $this->conn = new PDO($this->dsn, $this->user, $this->pass);
+                $this->conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 $err_msg = 'Database Error: ';
                 $err_msg .= $e->getMessage();
@@ -40,7 +40,7 @@
         }
 
         // get the only instance
-        public static function getInstance() {
+        public static function get_instance() {
           if(!self::$instance)
           {
             self::$instance = new ConnectionDB();
@@ -50,7 +50,7 @@
         }
 
         // through the instance get the connection
-        public function getConnection() {
+        public function get_connection() {
           return $this->conn;
         }
     }
